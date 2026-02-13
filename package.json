@@ -1,0 +1,38 @@
+{
+  "name": "@mcpengine/helpscout-mcp-server",
+  "version": "1.0.0",
+  "description": "Complete HelpScout Mailbox API v2 MCP Server with OAuth2 authentication",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc && npm run copy-apps",
+    "copy-apps": "mkdir -p dist/apps && cp -r src/apps/*.tsx dist/apps/ 2>/dev/null || true",
+    "dev": "tsc --watch",
+    "start": "node dist/main.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "helpscout",
+    "mcp",
+    "support",
+    "customer-service",
+    "helpdesk",
+    "oauth2"
+  ],
+  "author": "MCP Engine",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
